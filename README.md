@@ -17,7 +17,6 @@ A tool to check TLS/SSL certificates. Powered by sslscan.
 ## TO-DO
 - Remove www from URLs
 - Optionally put, by argument, the addition of port 80 and 443 at the end of the URL
-- Adjust execution without arguments (leads to error)
 - Add custom message for host invalid or error
 
 ## Install
