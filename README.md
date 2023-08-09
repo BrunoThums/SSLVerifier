@@ -24,7 +24,7 @@ A tool to check TLS/SSL certificates. Powered by sslscan.
 - wget https://github.com/BrunoThums/SSLVerifier/blob/main/SSLVerifier.sh; chmod +x SSLVerifier.sh
 
 # How to use
-You can pass a URL or a file with URLs without any treatment:
+- You can pass a URL or a file with URLs without any treatment:
   - Doesn't need to pass http:// or https://
   - ~~Doen't need to pass www~~ (coming soon)
   - Doens't need to inform a port
