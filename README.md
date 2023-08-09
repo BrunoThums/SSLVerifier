@@ -4,6 +4,7 @@ A tool to check TLS/SSL certificates. Powered by sslscan.
 ## What it can do?
 - (Obviously) check TLS/SSL certificates of a single URL or a file of URLs
 - Convert URL from http to https (required for sslscan)
+- Add https:// to every URL (if there's none)
 - Add port 80 and 443 to URL that doesn't contain a port especified
 - Check for duplicates in file
 - Show, at the end, which URL's have:
