@@ -25,9 +25,9 @@ A tool to check TLS/SSL certificates. Powered by sslscan.
 
 # How to use
 - You can pass a URL or a file with URLs without any treatment:
-  - Doesn't need to pass http:// or https://
-  - ~~Doen't need to pass www~~ (coming soon)
-  - Doens't need to inform a port
+  - No need to pass http:// or https://
+  - No need to pass www (coming soon)
+  - No port required
   - Don't worry about duplicates
   - Don't worry about directories
 - ./SSLVerifier.sh file_with_urls.txt
