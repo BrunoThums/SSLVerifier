@@ -22,7 +22,7 @@ A tool to check TLS/SSL certificates. Powered by sslscan.
 
 ## Install
 - git clone https://github.com/BrunoThums/SSLVerifier.git; cd SSLVerifier; chmod +x SSLVerifier.sh
-- wget https://github.com/BrunoThums/SSLVerifier/blob/main/SSLVerifier.sh; chmod +x SSLVerifier.sh
+- wget https://raw.githubusercontent.com/BrunoThums/SSLVerifier/main/SSLVerifier.sh; chmod +x SSLVerifier.sh
 
 ## How to use
 - You can pass a URL or a file with URLs without any treatment:
