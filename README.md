@@ -18,6 +18,7 @@ A tool to check TLS/SSL certificates. Powered by sslscan.
 - Remove www from URLs
 - Optionally put, by argument, the addition of port 80 and 443 at the end of the URL
 - Add custom message for host invalid or error
+- Check if all protocols are disable (is it even accessible?)
 
 ## Install
 - git clone https://github.com/BrunoThums/SSLVerifier.git; cd SSLVerifier; chmod +x SSLVerifier.sh
