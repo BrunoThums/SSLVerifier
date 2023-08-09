@@ -22,8 +22,6 @@ file_url_adjuster(){
     cleaned_array=()
 
     while read -r url; do
-        echo "###Printando url do while de file url adjuster"
-        echo "###$url"
         # If has http, turn into https; else add https. If has https does nothing (important to not duplicate)
         if [[ $url =~ ^(http://|https://) ]]; then
             url="${url/http:/https:}"
@@ -34,18 +32,12 @@ file_url_adjuster(){
         
         # Remove directories
         domain=$(echo "$url" | awk -F/ '{print $1 "//" $3}')
-        echo "###printando pós awk"
-        echo "###$domain"
         # Check if the URL contains a port. If dont, add 80 and 443
         if [[ ! $domain =~ :[0-9]+$ ]]; then
             url1="${domain}:80"
             url2="${domain}:443"
             cleaned_array+=("$url1")
             cleaned_array+=("$url2")
-            echo "###print url1"
-            echo "###$url1"
-            echo "###print url2"
-            echo "###$url2"
         else
             cleaned_array+=("$domain")
         fi
@@ -55,8 +47,7 @@ file_url_adjuster(){
     # Removendo duplicados da lista de URLs
     cleaned_list=$(echo "${cleaned_array[@]}" | tr ' ' '\n' | sort -u)
     
-    echo "###pré while check_tls do arquivo"
-    echo "$cleaned_list"
+    #echo "$cleaned_list"
 }
 
 # Function to check TLS protocols
