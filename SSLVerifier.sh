@@ -80,7 +80,7 @@ check_tls() {
     
     # 1.1 and 1.2 enabled?
     if [ $tls10_enable -eq 1 ] && [ $tls11_enable -eq 1 ]; then
-        report+=("$site_final has TLSv1.0 e TLSv1.1 enabled.")
+        report+=("$site_final has TLSv1.0 and TLSv1.1 enabled.")
     
     # Only 1.0 enabled?
     elif [ $tls10_enable -eq 1 ]; then
