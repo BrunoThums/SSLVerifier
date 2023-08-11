@@ -133,7 +133,7 @@ run_4_URL(){
 
 # Show usage message if no arguments passed
 if [ $# -eq 0 ]; then
-    echo -e "Use:\n$0 file_with_urls.txt\n$0 single_URL"
+    echo -e "Use:\nsslverifier file_with_urls.txt\nsslverifier single_URL"
     exit 1
 fi
 
