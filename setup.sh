@@ -23,9 +23,9 @@ chmod +x "sslverifier.sh"
 
 # Move the entire directory to /usr/local/bin
 echo "Moving script to path"
-mv sslverifier.sh /usr/bin/SSLVerifier/sslverifier
+mv sslverifier.sh /usr/bin/sslverifier
 echo "Done!"
-echo "You can now use SSLVerifier anywhere :)"
+echo "You can now use sslverifier anywhere :)"
 echo "Goodbye!"
 cd ..
 rm -rf SSLVerifier
