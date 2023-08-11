@@ -2,7 +2,6 @@
 A tool to check TLS/SSL certificates. Powered by sslscan.
 
 ## Install
-There are two options:
 - `git clone https://github.com/BrunoThums/SSLVerifier.git; cd SSLVerifier; chmod +x setup.sh; sudo ./setup.sh`
 
 ## How to use
@@ -12,8 +11,8 @@ There are two options:
   - No port required
   - Don't worry about duplicates
   - Don't worry about directories
-- SSLVerifier file_with_urls.txt
-- SSLVerifier single_URL
+- sslverifier file_with_urls.txt
+- sslverifier single_URL
 
 ## What it can do?
 - (Obviously) check TLS/SSL certificates of a single URL or a file of URLs
@@ -25,6 +24,10 @@ There are two options:
   - TLSv1.0 and/or TLSv1.1 enabled
   - TLSv1.2 AND TLSv1.3 disabled
 
+### Other funcionalities
+- You can run it anywhere
+- Automatically check if sslscan is installed and. If not, then install
+
 ## Useful links:
 - https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 
@@ -33,8 +36,6 @@ There are two options:
 - Optionally put, by argument, the addition of port 80 and 443 at the end of the URL
 - Add custom message for host invalid or error
 - Check if all protocols are disable (is it even accessible?)]
-- Check if sslscan is installed and if not, automatically install
-- Put into path, so it can be run anywhere
 - Check, by argument, for valid/invalid certificates
 
 
