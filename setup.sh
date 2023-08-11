@@ -19,7 +19,7 @@ else
 fi
 
 # Make the SSLVerifier.sh script executable
-chmod +x "$script_dir/sslverifier.sh"
+chmod +x "sslverifier.sh"
 
 # Move the entire directory to /usr/local/bin
 echo "Moving script to path"
