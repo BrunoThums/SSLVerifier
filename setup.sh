@@ -18,17 +18,14 @@ else
     echo "sslscan is already installed."
 fi
 
-# Obtain the directory of the script
-script_dir=$(dirname "$0")
+# Make the SSLVerifier.sh script executable
+chmod +x "$script_dir/SSLVerifier.sh"
 
-# Add script directory to PATH
-echo "Adding script directory to PATH"
-echo "export PATH=\"$script_dir:\$PATH\"" >> ~/.bashrc
-source ~/.bashrc
-
-echo "Giving execute permission to SSLVerifier.sh"
-chmod +x SSLVerifier.sh
+# Move the entire directory to /usr/local/bin
+echo "Moving script to path"
+mv SSLVerifier.sh /usr/bin/SSLVerifier/sslverifier
 echo "Done!"
-
 echo "You can now use SSLVerifier anywhere :)"
 echo "Goodbye!"
+cd ..
+rm -rf SSLVerifier
