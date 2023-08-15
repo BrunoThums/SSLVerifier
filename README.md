@@ -1,9 +1,12 @@
 # SSLVerifier
-A tool to check TLS/SSL certificates. Powered by sslscan.
+A tool to check TLS/SSL version. Powered by sslscan.
 
 ## Install
 - `git clone https://github.com/BrunoThums/SSLVerifier.git; cd SSLVerifier; chmod +x setup.sh; sudo ./setup.sh`
+<!-- É possível mudar essa instalação. Baixe a ferramenta no linux/kali, dê permissão de execução para o setup.sh e faça o commit. Assim dará pra mudar para:
+git clone https://github.com/BrunoThums/SSLVerifier.git; sudo SSLVerifier/setup.sh 
 
+-->
 ## How to use
 - You can pass a URL or a file with URLs without any treatment:
   - No need to pass http:// or https://
