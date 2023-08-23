@@ -118,14 +118,14 @@ run_4_URL(){
             url="https://$url"
         fi
     # Extract domain from URL (cuts directories)
-    domain=$(echo "$site" | awk -F/ '{print $1 "//" $3}')
-    if [[ ! $url =~ :[0-9]+$ ]]; then
-        site_final="${url}:80"
+    domain=$(echo "$url" | awk -F/ '{print $1 "//" $3}')
+    if [[ ! $domain =~ :[0-9]+$ ]]; then
+        site_final="${domain}:80"
         check_tls "$site_final"
-        site_final="${url}:443"
+        site_final="${domain}:443"
         check_tls "$site_final"
     else
-        site_final = "${url}"
+        site_final="${domain}"
         check_tls "$site_final"
     fi
     print_report
