@@ -32,7 +32,9 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
 - Automatically check if sslscan is installed and. If not, then install
 
 ## Useful links:
-- https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+- [ANSI escape code - Colors]([url](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors))
+- [ASCII Generator]([url](https://patorjk.com/software/taag/))
+- How to print an ASCII image? Save in a txt, type `cat image.txt | gzip | base64` in terminal, copy and paste into script `base64 -d <<<"yourBase64image" | gunzip` (that's it, only ctrl+v, don't add new lines or remove new lines, leaves as it is)
 
 ## TO-DO
 - Remove www from URLs
