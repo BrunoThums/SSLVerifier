@@ -22,7 +22,7 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
 - Convert URL from http to https (required for sslscan)
 - Add https:// to every URL (if there's none)
 - Add port 80 and 443 to URL that doesn't contain a port especified
-- Check for duplicates in file
+- Get rid off duplicates in file
 - Show, at the end, which URL's have:
   - TLSv1.0 and/or TLSv1.1 enabled
   - TLSv1.2 AND TLSv1.3 disabled
