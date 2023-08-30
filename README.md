@@ -43,4 +43,5 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
 - Check if all protocols are disable (is it even accessible?)]
 - Check, by argument, for valid/invalid certificates
 
-
+## How to remove
+- `sudo rm /usr/bin/sslverifier`
