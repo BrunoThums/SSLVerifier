@@ -13,12 +13,19 @@ print_report(){
     for site_info in "${report[@]}"; do
         echo "$site_info"
     done
+    
+    if [ ! -z "$report_check" ]; then
+        echo -e "\e[33m" "All versions disabled (it's accessible?):" "\e[0m"
+        for site_info in "${report_check[@]}"; do
+            echo "$site_info"
+        done
+    fi
 }
 
 # Function to remove duplicates and check if sites don't start with http:// or http://
 # OBS: sslscan only accept https or site:port or https://site:port, never http://whatever
 file_url_adjuster(){
-    # Array para armazenar os URLs processados
+    # Array for store handled URLs
     cleaned_array=()
 
     while read -r url; do
@@ -44,7 +51,7 @@ file_url_adjuster(){
     # is used to redirect input to a command or loop from a file (not from a list like "<<<")
     done < "$filename"
 
-    # Removendo duplicados da lista de URLs
+    # Removes duplicates from URL list
     cleaned_list=$(echo "${cleaned_array[@]}" | tr ' ' '\n' | sort -u)
     
     #echo "$cleaned_list"
@@ -58,7 +65,7 @@ check_tls() {
     local tls12_enable=1
     local tls13_enable=1
 
-    echo -e "\e[33m" "$site_final" "\e[0m"
+    echo -e "\n\e[33m" "$site_final" "\e[0m"
     output=$(sslscan "$site_final" | grep -A6 "SSL/TLS Protocols")
     echo "$output"
     
@@ -78,8 +85,12 @@ check_tls() {
         tls13_enable=0
     fi
     
+    # all disabled?
+    if [ $tls10_enable -eq 0 ] && [ $tls11_enable -eq 0 ] && [ $tls12_enable -eq 0 ] && [ $tls13_enable -eq 0 ]; then
+        all_disabled=true
+        report_check+=("$site_final")
     # 1.1 and 1.2 enabled?
-    if [ $tls10_enable -eq 1 ] && [ $tls11_enable -eq 1 ]; then
+    elif [ $tls10_enable -eq 1 ] && [ $tls11_enable -eq 1 ]; then
         report+=("$site_final has TLSv1.0 and TLSv1.1 enabled.")
     
     # Only 1.0 enabled?
@@ -92,7 +103,7 @@ check_tls() {
     fi
     
     # 1.2 e 1.3 disabled?
-    if [ $tls12_enable -eq 0 ] && [ $tls13_enable -eq 0 ]; then
+    if [ "$all_disabled" = "true" ] && [ $tls12_enable -eq 0 ] && [ $tls13_enable -eq 0 ]; then
         report+=("$site_final has TLSv1.2 and TLSv1.3 disabled.")
     fi
     
