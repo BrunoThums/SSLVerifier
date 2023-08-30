@@ -18,6 +18,8 @@ else
     echo "sslscan is already installed."
 fi
 
+# Download sslverifier.sh
+wget "https://raw.githubusercontent.com/BrunoThums/SSLVerifier/main/sslverifier.sh"
 # Make the SSLVerifier.sh script executable
 chmod +x "sslverifier.sh"
 
@@ -27,5 +29,4 @@ mv sslverifier.sh /usr/bin/sslverifier
 echo "Done!"
 echo "You can now use sslverifier anywhere :)"
 echo "Goodbye!"
-cd ..
-rm -rf SSLVerifier
+rm setup.sh
