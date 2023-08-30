@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\033[36m Setup for SSLVerifier commencing \033[0m!"
+echo -e "\033[36m Setup for SSLVerifier commencing! \033[0m"
 
 # Verify if command was used with sudo
 if [ "$(id -u)" -ne 0 ]; then
