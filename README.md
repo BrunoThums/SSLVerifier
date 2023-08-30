@@ -27,10 +27,6 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
   - TLSv1.0 and/or TLSv1.1 enabled
   - TLSv1.2 AND TLSv1.3 disabled
 
-### Other funcionalities
-- You can run it anywhere
-- Automatically check if sslscan is installed and. If not, then install
-
 ## Useful links:
 - [ANSI escape code - Colors](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
 - [ASCII Generator](https://patorjk.com/software/taag/)
@@ -43,5 +39,5 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
 - Check if all protocols are disable (is it even accessible?)]
 - Check, by argument, for valid/invalid certificates
 
-## How to remove
+## Uninstall
 - `sudo rm /usr/bin/sslverifier`
