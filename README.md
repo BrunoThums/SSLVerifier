@@ -26,6 +26,7 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
 - Show, at the end, which URL's have:
   - TLSv1.0 and/or TLSv1.1 enabled
   - TLSv1.2 AND TLSv1.3 disabled
+- Check if all protocols are disable (is it even accessible?)
 
 ## Useful links:
 - [ANSI escape code - Colors](https://en.wikipedia.org/wiki/ANSI_escape_code#Colors)
@@ -36,7 +37,6 @@ Só precisa ajustar o "local" do script, dentro dele. Porque senão ele não con
 - Remove www from URLs
 - Optionally put, by argument, the addition of port 80 and 443 at the end of the URL
 - Add custom message for host invalid or error
-- Check if all protocols are disable (is it even accessible?)]
 - Check, by argument, for valid/invalid certificates
 
 ## Uninstall
