@@ -103,7 +103,7 @@ check_tls() {
     fi
     
     # 1.2 e 1.3 disabled?
-    if [ "$all_disabled" = "true" ] && [ $tls12_enable -eq 0 ] && [ $tls13_enable -eq 0 ]; then
+    if [ "$all_disabled" = "false" ] && [ $tls12_enable -eq 0 ] && [ $tls13_enable -eq 0 ]; then
         report+=("$site_final has TLSv1.2 and TLSv1.3 disabled.")
     fi
     
